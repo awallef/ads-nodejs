@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+'use strict'
+process.title = 'ads'
+
+const
+args = require('args'),
+chalk = require('chalk'),
+createProject = require('../src/actions/createProject.js'),
+setupProject = require('../src/actions/setupProject.js')
+
+args
+.option('name', 'Name of project')
+.option('formats', 'The formats to create', ['300x250'])
+.option('template', 'Path to template dir')
+
+const
+flags = args.parse(process.argv)
+
+if(!flags.name)
+{
+  console.log(chalk.red('Err. Need project name to create with --name projectName'))
+  process.exit()
+}
+
+for(let i in flags.formats)
+{
+  if(flags.formats[i].indexOf('x') == -1)
+  {
+    console.log(chalk.red('Err. '+flags.formats[i]+' needs to be lime 200x300 with "x"...'))
+    process.exit()
+  }
+}
+
+createProject(flags.name, flags.formats, flags.template)
+setupProject(flags.name, flags.formats)

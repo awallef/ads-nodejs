@@ -1,0 +1,8 @@
+@each $name, $hexa in $colors {
+  .color--#{$name} {
+    color: #{$hexa} !important;
+  }
+  .bg--#{$name} {
+    background: #{$hexa} !important;
+  }
+}

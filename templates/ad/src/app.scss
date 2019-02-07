@@ -1,0 +1,46 @@
+/*
+*   VARS
+*************/
+$margin--mini:10px;
+$margin--semi:20px;
+$margin--default:40px;
+$margin--double:80px;
+
+$default-font--light:'Arial';
+$default-font--book:'Arial';
+$default-font--medium:'Arial';
+$default-font--bold:'Arial';
+
+$font-color: black;
+
+@import '../../assets/vars';
+@import '../../assets/utils';
+
+/*
+*   FONTS
+*************/
+body{ font-family: $default-font--light;color:$font-color;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;letter-spacing: 1px;}
+html{font-size: 62.5%;}
+body{font-size: 1.6rem;}
+h1{font-family: $default-font--medium;font-size: 3.5rem;}
+h2{font-family: $default-font--medium;font-size: 3rem;}
+h3{font-family: $default-font--medium;font-size:2rem;}
+h4{font-family: $default-font--book;font-size:2rem;}
+
+/*
+*   PAGE
+*************/
+.page {
+  $this: &;
+
+  width: 100%; height: 100%;
+
+  &__container {
+    width: <!--width-->px; height:<!--height-->px;
+  }
+}
+
+
+/*
+*   STYLE
+*************/
