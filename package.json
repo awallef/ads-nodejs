@@ -1,6 +1,6 @@
 {
   "name": "ads-nodejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Starter kit for ads",
   "bin": {
     "ads": "bin/ads"
